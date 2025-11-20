@@ -1,0 +1,20 @@
+2025-11-20 20:29:01,388 [INFO] fetch_market: Fetching market board from eastmoney_etf
+2025-11-20 20:29:01,789 [INFO] fetch_market: Wrote 82 rows to table market_board
+2025-11-20 20:29:01,802 [INFO] fetch_market: Dumped raw CSV to D:\project\ETF_performance\data\raw\market_board_20251120_202901.csv
+2025-11-20 20:29:08,938 [INFO] fetch_announcements: Fetching announcements from szse_bulletin
+2025-11-20 20:29:22,942 [INFO] fetch_announcements: Fetching announcements from szse_bulletin
+2025-11-20 20:31:29,979 [INFO] fetch_announcements: Fetching announcements from gov_policy
+2025-11-20 20:31:30,108 [INFO] fetch_announcements: Wrote 60 records into announcements
+2025-11-20 20:31:30,118 [INFO] fetch_announcements: Dumped CSV to D:\project\ETF_performance\data\raw\announcements_20251120_203130.csv
+2025-11-20 20:31:37,336 [INFO] fetch_etf_flows: Fetching SZSE ETF list...
+2025-11-20 20:32:38,356 [INFO] fetch_etf_flows: Fetching capital flow: northbound
+2025-11-20 20:32:38,459 [INFO] fetch_etf_flows: Wrote 4 rows to table capital_flows
+2025-11-20 20:32:38,465 [INFO] fetch_etf_flows: Dump raw CSV to D:\project\ETF_performance\data\raw\capital_flows_20251120_203238.csv
+2025-11-20 23:02:27,268 [INFO] fetch_market: Fetching market board from eastmoney_etf
+2025-11-20 23:02:27,458 [INFO] fetch_market: Wrote 82 rows to table market_board
+2025-11-20 23:02:33,346 [INFO] fetch_announcements: Fetching announcements from gov_policy
+2025-11-20 23:02:33,442 [INFO] fetch_announcements: Wrote 60 records into announcements
+2025-11-20 23:02:37,838 [INFO] fetch_etf_flows: Fetching capital flow: northbound
+2025-11-20 23:02:37,956 [INFO] fetch_etf_flows: Wrote 4 rows to table capital_flows
+2025-11-20 23:04:22,765 [INFO] fetch_market: Fetching market board from eastmoney_etf
+2025-11-20 23:04:22,931 [INFO] fetch_market: Wrote 82 rows to table market_board
