@@ -9,7 +9,14 @@ import pandas as pd
 import requests
 from requests import Response
 
-from .config import EndpointConfig, MARKET_ENDPOINTS, ANNOUNCEMENT_ENDPOINTS, FLOW_ENDPOINTS
+from .config import (
+    DEFAULT_HEADERS,
+    EndpointConfig,
+    MARKET_ENDPOINTS,
+    ANNOUNCEMENT_ENDPOINTS,
+    FLOW_ENDPOINTS,
+    FUND_DETAIL_ENDPOINTS,
+)
 
 
 class DataSourceError(RuntimeError):
@@ -19,8 +26,13 @@ class DataSourceError(RuntimeError):
 def _request_json(endpoint: EndpointConfig, timeout: int = 10) -> Dict[str, Any]:
     """Low-level helper to issue GET request and return JSON payload."""
     try:
+        # Disable proxy to avoid proxy connection errors
         response: Response = requests.get(
-            endpoint.url, params=endpoint.params, headers=endpoint.headers, timeout=timeout
+            endpoint.url, 
+            params=endpoint.params, 
+            headers=endpoint.headers, 
+            timeout=timeout,
+            proxies={"http": None, "https": None}  # Disable proxy
         )
     except requests.RequestException as exc:
         raise DataSourceError(f"Request failed for {endpoint.name}: {exc}") from exc
@@ -161,3 +173,138 @@ def _to_float(value: str) -> float:
         return float(value)
     except (TypeError, ValueError):
         return float("nan")
+
+
+def fetch_fund_detail(fund_code: str, source: str = "eastmoney_fund_basic") -> Dict[str, Any]:
+    """Fetch detailed fund information including business type and investment direction.
+    
+    Args:
+        fund_code: Fund code (e.g., "510300")
+        source: Data source key, defaults to "eastmoney_fund_basic"
+    
+    Returns:
+        Dictionary containing fund details including:
+        - fund_type: Fund type (e.g., "指数型-股票")
+        - fund_name: Fund short name
+        - top_holdings: Top holdings/investments
+        - investment_objective: Investment objective (if available)
+    """
+    endpoint = FUND_DETAIL_ENDPOINTS[source]
+    # Add fund code to params
+    params = dict(endpoint.params)
+    params["FCODE"] = fund_code
+    
+    # Create a temporary endpoint with the fund code
+    temp_endpoint = EndpointConfig(
+        name=endpoint.name,
+        url=endpoint.url,
+        params=params,
+        headers=endpoint.headers,
+        description=endpoint.description,
+    )
+    
+    try:
+        payload = _request_json(temp_endpoint)
+    except DataSourceError:
+        return {}
+    
+    data = payload.get("Datas", {})
+    if not data:
+        return {}
+    
+    result = {
+        "fund_code": data.get("FCODE", fund_code),
+        "fund_name": data.get("SHORTNAME", ""),
+        "fund_type": data.get("FTYPE", ""),
+        "top_holdings": data.get("FUNDINVEST", ""),
+        "risk_level": data.get("RISKLEVEL", ""),
+        "fund_company": data.get("JJGS", ""),
+        "fund_manager": data.get("JJJL", ""),
+        "establish_date": data.get("ESTABDATE", ""),
+    }
+    
+    return result
+
+
+def fetch_realtime_quotes(symbols: Sequence[str]) -> pd.DataFrame:
+    """Fetch real-time quotes for given symbols.
+    
+    Args:
+        symbols: List of stock/ETF symbols
+    
+    Returns:
+        DataFrame with real-time quote data including:
+        - symbol, name, price, pct_change, volume, turnover, etc.
+    """
+    if not symbols:
+        return pd.DataFrame()
+    
+    # Build secid list (market_code.symbol)
+    secids = []
+    for symbol in symbols:
+        symbol_str = str(symbol)
+        # Infer market code from symbol
+        if symbol_str.startswith(('5', '6')):
+            market_code = '1'  # Shanghai
+        else:
+            market_code = '0'  # Shenzhen
+        secids.append(f"{market_code}.{symbol_str}")
+    
+    # Use Eastmoney real-time quote API
+    url = "https://push2.eastmoney.com/api/qt/ulist.np/get"
+    params = {
+        "fltt": "2",
+        "invt": "2",
+        "fields": "f2,f3,f4,f5,f6,f12,f13,f14,f15,f16,f17,f18,f62",
+        "secids": ",".join(secids),
+        "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+    }
+    
+    try:
+        response = requests.get(
+            url, 
+            params=params, 
+            headers=DEFAULT_HEADERS, 
+            timeout=10,
+            proxies={"http": None, "https": None}  # Disable proxy
+        )
+        response.raise_for_status()
+        payload = response.json()
+    except (requests.RequestException, ValueError) as exc:
+        # Return empty DataFrame on error
+        return pd.DataFrame()
+    
+    data_rows = payload.get("data", {}).get("diff", [])
+    if not data_rows:
+        return pd.DataFrame()
+    
+    df = pd.DataFrame(data_rows)
+    renamed = df.rename(
+        columns={
+            "f12": "symbol",
+            "f14": "name",
+            "f2": "price",
+            "f3": "pct_change",
+            "f4": "change",
+            "f5": "volume",
+            "f6": "turnover",
+            "f15": "high",
+            "f16": "low",
+            "f17": "open",
+            "f18": "prev_close",
+            "f62": "net_inflow",
+            "f13": "market_code",
+        }
+    )
+    
+    numeric_cols = [
+        "price", "pct_change", "change", "volume", "turnover",
+        "high", "low", "open", "prev_close", "net_inflow"
+    ]
+    for col in numeric_cols:
+        if col in renamed.columns:
+            renamed[col] = pd.to_numeric(renamed[col], errors="coerce")
+    
+    return renamed
+
+

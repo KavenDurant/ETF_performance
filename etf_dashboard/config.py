@@ -145,5 +145,21 @@ FLOW_ENDPOINTS: Dict[str, EndpointConfig] = {
     )
 }
 
+# ETF/Fund detail endpoints for fetching business information
+FUND_DETAIL_ENDPOINTS: Dict[str, EndpointConfig] = {
+    "eastmoney_fund_basic": EndpointConfig(
+        name="eastmoney_fund_basic",
+        description="Eastmoney fund basic information including fund type and top holdings",
+        url="https://fundmobapi.eastmoney.com/FundMNewApi/FundMNBasicInformation",
+        params={
+            "deviceid": "antigravity",
+            "plat": "Android",
+            "product": "EFund",
+            "version": "6.3.8",
+        },
+        headers=DEFAULT_HEADERS,
+    )
+}
+
 
 ensure_directories()
