@@ -18,3 +18,171 @@
 2025-11-20 23:02:37,956 [INFO] fetch_etf_flows: Wrote 4 rows to table capital_flows
 2025-11-20 23:04:22,765 [INFO] fetch_market: Fetching market board from eastmoney_etf
 2025-11-20 23:04:22,931 [INFO] fetch_market: Wrote 82 rows to table market_board
+2025-11-21 09:17:15,065 [INFO] fetch_fund_details: Loading fund codes from market_board
+2025-11-21 09:17:15,065 [INFO] fetch_fund_details: Found 82 unique fund codes
+2025-11-21 09:17:15,065 [INFO] fetch_fund_details: Fetching details for 001390 (1/82)
+2025-11-21 09:17:15,090 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001390
+2025-11-21 09:17:15,393 [INFO] fetch_fund_details: Fetching details for 603092 (2/82)
+2025-11-21 09:17:15,419 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603092
+2025-11-21 09:17:15,723 [INFO] fetch_fund_details: Fetching details for 688759 (3/82)
+2025-11-21 09:17:15,749 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688759
+2025-11-21 09:17:16,051 [INFO] fetch_fund_details: Fetching details for 001221 (4/82)
+2025-11-21 09:17:16,083 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001221
+2025-11-21 09:17:16,388 [INFO] fetch_fund_details: Fetching details for 301629 (5/82)
+2025-11-21 09:17:16,417 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301629
+2025-11-21 09:17:16,717 [INFO] fetch_fund_details: Fetching details for 603175 (6/82)
+2025-11-21 09:17:16,750 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603175
+2025-11-21 09:17:17,056 [INFO] fetch_fund_details: Fetching details for 301665 (7/82)
+2025-11-21 09:17:17,090 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301665
+2025-11-21 09:17:17,395 [INFO] fetch_fund_details: Fetching details for 301458 (8/82)
+2025-11-21 09:17:17,427 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301458
+2025-11-21 09:17:17,732 [INFO] fetch_fund_details: Fetching details for 688708 (9/82)
+2025-11-21 09:17:17,763 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688708
+2025-11-21 09:17:18,067 [INFO] fetch_fund_details: Fetching details for 301668 (10/82)
+2025-11-21 09:17:18,099 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301668
+2025-11-21 09:17:18,404 [INFO] fetch_fund_details: Fetching details for 603334 (11/82)
+2025-11-21 09:17:18,431 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603334
+2025-11-21 09:17:18,736 [INFO] fetch_fund_details: Fetching details for 688758 (12/82)
+2025-11-21 09:17:18,762 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688758
+2025-11-21 09:17:19,066 [INFO] fetch_fund_details: Fetching details for 603120 (13/82)
+2025-11-21 09:17:19,091 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603120
+2025-11-21 09:17:19,395 [INFO] fetch_fund_details: Fetching details for 001335 (14/82)
+2025-11-21 09:17:19,424 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001335
+2025-11-21 09:17:19,728 [INFO] fetch_fund_details: Fetching details for 001400 (15/82)
+2025-11-21 09:17:19,755 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001400
+2025-11-21 09:17:20,060 [INFO] fetch_fund_details: Fetching details for 301632 (16/82)
+2025-11-21 09:17:20,089 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301632
+2025-11-21 09:17:20,395 [INFO] fetch_fund_details: Fetching details for 688755 (17/82)
+2025-11-21 09:17:20,428 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688755
+2025-11-21 09:17:20,734 [INFO] fetch_fund_details: Fetching details for 603376 (18/82)
+2025-11-21 09:17:20,764 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603376
+2025-11-21 09:17:21,070 [INFO] fetch_fund_details: Fetching details for 001386 (19/82)
+2025-11-21 09:17:21,102 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001386
+2025-11-21 09:17:21,408 [INFO] fetch_fund_details: Fetching details for 603202 (20/82)
+2025-11-21 09:17:21,438 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603202
+2025-11-21 09:17:21,743 [INFO] fetch_fund_details: Fetching details for 688765 (21/82)
+2025-11-21 09:17:21,775 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688765
+2025-11-21 09:17:22,081 [INFO] fetch_fund_details: Fetching details for 301662 (22/82)
+2025-11-21 09:17:22,115 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301662
+2025-11-21 09:17:22,419 [INFO] fetch_fund_details: Fetching details for 301630 (23/82)
+2025-11-21 09:17:22,449 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301630
+2025-11-21 09:17:22,754 [INFO] fetch_fund_details: Fetching details for 001395 (24/82)
+2025-11-21 09:17:22,790 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001395
+2025-11-21 09:17:23,096 [INFO] fetch_fund_details: Fetching details for 603210 (25/82)
+2025-11-21 09:17:23,128 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603210
+2025-11-21 09:17:23,433 [INFO] fetch_fund_details: Fetching details for 603072 (26/82)
+2025-11-21 09:17:23,466 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603072
+2025-11-21 09:17:23,772 [INFO] fetch_fund_details: Fetching details for 301275 (27/82)
+2025-11-21 09:17:23,802 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301275
+2025-11-21 09:17:24,108 [INFO] fetch_fund_details: Fetching details for 301560 (28/82)
+2025-11-21 09:17:24,140 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301560
+2025-11-21 09:17:24,446 [INFO] fetch_fund_details: Fetching details for 001391 (29/82)
+2025-11-21 09:17:24,484 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001391
+2025-11-21 09:17:24,788 [INFO] fetch_fund_details: Fetching details for 001388 (30/82)
+2025-11-21 09:17:24,815 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001388
+2025-11-21 09:17:25,120 [INFO] fetch_fund_details: Fetching details for 603124 (31/82)
+2025-11-21 09:17:25,151 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603124
+2025-11-21 09:17:25,457 [INFO] fetch_fund_details: Fetching details for 301616 (32/82)
+2025-11-21 09:17:25,490 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301616
+2025-11-21 09:17:25,795 [INFO] fetch_fund_details: Fetching details for 301535 (33/82)
+2025-11-21 09:17:25,829 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301535
+2025-11-21 09:17:26,134 [INFO] fetch_fund_details: Fetching details for 603049 (34/82)
+2025-11-21 09:17:26,158 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603049
+2025-11-21 09:17:26,463 [INFO] fetch_fund_details: Fetching details for 301585 (35/82)
+2025-11-21 09:17:26,490 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301585
+2025-11-21 09:17:26,790 [INFO] fetch_fund_details: Fetching details for 600930 (36/82)
+2025-11-21 09:17:26,817 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 600930
+2025-11-21 09:17:27,117 [INFO] fetch_fund_details: Fetching details for 603257 (37/82)
+2025-11-21 09:17:27,146 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603257
+2025-11-21 09:17:27,448 [INFO] fetch_fund_details: Fetching details for 301622 (38/82)
+2025-11-21 09:17:27,479 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301622
+2025-11-21 09:17:27,780 [INFO] fetch_fund_details: Fetching details for 601026 (39/82)
+2025-11-21 09:17:27,809 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 601026
+2025-11-21 09:17:28,114 [INFO] fetch_fund_details: Fetching details for 001382 (40/82)
+2025-11-21 09:17:28,146 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001382
+2025-11-21 09:17:28,451 [INFO] fetch_fund_details: Fetching details for 603014 (41/82)
+2025-11-21 09:17:28,483 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603014
+2025-11-21 09:17:28,788 [INFO] fetch_fund_details: Fetching details for 301173 (42/82)
+2025-11-21 09:17:28,818 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301173
+2025-11-21 09:17:29,124 [INFO] fetch_fund_details: Fetching details for 001285 (43/82)
+2025-11-21 09:17:29,154 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001285
+2025-11-21 09:17:29,460 [INFO] fetch_fund_details: Fetching details for 688545 (44/82)
+2025-11-21 09:17:29,589 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688545
+2025-11-21 09:17:29,894 [INFO] fetch_fund_details: Fetching details for 301598 (45/82)
+2025-11-21 09:17:29,924 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301598
+2025-11-21 09:17:30,229 [INFO] fetch_fund_details: Fetching details for 301575 (46/82)
+2025-11-21 09:17:30,259 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301575
+2025-11-21 09:17:30,565 [INFO] fetch_fund_details: Fetching details for 301595 (47/82)
+2025-11-21 09:17:30,593 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301595
+2025-11-21 09:17:30,898 [INFO] fetch_fund_details: Fetching details for 603406 (48/82)
+2025-11-21 09:17:30,925 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603406
+2025-11-21 09:17:31,231 [INFO] fetch_fund_details: Fetching details for 688757 (49/82)
+2025-11-21 09:17:31,268 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688757
+2025-11-21 09:17:31,573 [INFO] fetch_fund_details: Fetching details for 301636 (50/82)
+2025-11-21 09:17:31,603 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301636
+2025-11-21 09:17:31,905 [INFO] fetch_fund_details: Fetching details for 603418 (51/82)
+2025-11-21 09:17:31,939 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603418
+2025-11-21 09:17:32,245 [INFO] fetch_fund_details: Fetching details for 301678 (52/82)
+2025-11-21 09:17:32,281 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301678
+2025-11-21 09:17:32,587 [INFO] fetch_fund_details: Fetching details for 688583 (53/82)
+2025-11-21 09:17:32,619 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688583
+2025-11-21 09:17:32,921 [INFO] fetch_fund_details: Fetching details for 603409 (54/82)
+2025-11-21 09:17:32,954 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603409
+2025-11-21 09:17:33,260 [INFO] fetch_fund_details: Fetching details for 301501 (55/82)
+2025-11-21 09:17:33,295 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301501
+2025-11-21 09:17:33,598 [INFO] fetch_fund_details: Fetching details for 603370 (56/82)
+2025-11-21 09:17:33,629 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603370
+2025-11-21 09:17:33,935 [INFO] fetch_fund_details: Fetching details for 603271 (57/82)
+2025-11-21 09:17:33,969 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603271
+2025-11-21 09:17:34,273 [INFO] fetch_fund_details: Fetching details for 301491 (58/82)
+2025-11-21 09:17:34,306 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301491
+2025-11-21 09:17:34,611 [INFO] fetch_fund_details: Fetching details for 301581 (59/82)
+2025-11-21 09:17:34,643 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301581
+2025-11-21 09:17:34,949 [INFO] fetch_fund_details: Fetching details for 301656 (60/82)
+2025-11-21 09:17:34,982 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301656
+2025-11-21 09:17:35,288 [INFO] fetch_fund_details: Fetching details for 301609 (61/82)
+2025-11-21 09:17:35,321 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301609
+2025-11-21 09:17:35,623 [INFO] fetch_fund_details: Fetching details for 688411 (62/82)
+2025-11-21 09:17:35,656 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688411
+2025-11-21 09:17:35,961 [INFO] fetch_fund_details: Fetching details for 688729 (63/82)
+2025-11-21 09:17:35,990 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688729
+2025-11-21 09:17:36,296 [INFO] fetch_fund_details: Fetching details for 301479 (64/82)
+2025-11-21 09:17:36,328 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301479
+2025-11-21 09:17:36,630 [INFO] fetch_fund_details: Fetching details for 603194 (65/82)
+2025-11-21 09:17:36,663 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603194
+2025-11-21 09:17:36,969 [INFO] fetch_fund_details: Fetching details for 301590 (66/82)
+2025-11-21 09:17:37,002 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301590
+2025-11-21 09:17:37,305 [INFO] fetch_fund_details: Fetching details for 001356 (67/82)
+2025-11-21 09:17:37,338 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 001356
+2025-11-21 09:17:37,643 [INFO] fetch_fund_details: Fetching details for 301601 (68/82)
+2025-11-21 09:17:37,682 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301601
+2025-11-21 09:17:37,988 [INFO] fetch_fund_details: Fetching details for 603262 (69/82)
+2025-11-21 09:17:38,022 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603262
+2025-11-21 09:17:38,327 [INFO] fetch_fund_details: Fetching details for 603382 (70/82)
+2025-11-21 09:17:38,358 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603382
+2025-11-21 09:17:38,663 [INFO] fetch_fund_details: Fetching details for 688727 (71/82)
+2025-11-21 09:17:38,692 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688727
+2025-11-21 09:17:38,997 [INFO] fetch_fund_details: Fetching details for 603400 (72/82)
+2025-11-21 09:17:39,030 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 603400
+2025-11-21 09:17:39,333 [INFO] fetch_fund_details: Fetching details for 688775 (73/82)
+2025-11-21 09:17:39,368 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688775
+2025-11-21 09:17:39,672 [INFO] fetch_fund_details: Fetching details for 301602 (74/82)
+2025-11-21 09:17:39,703 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301602
+2025-11-21 09:17:40,009 [INFO] fetch_fund_details: Fetching details for 688605 (75/82)
+2025-11-21 09:17:40,037 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688605
+2025-11-21 09:17:40,341 [INFO] fetch_fund_details: Fetching details for 301563 (76/82)
+2025-11-21 09:17:40,373 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301563
+2025-11-21 09:17:40,679 [INFO] fetch_fund_details: Fetching details for 301658 (77/82)
+2025-11-21 09:17:40,711 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301658
+2025-11-21 09:17:41,016 [INFO] fetch_fund_details: Fetching details for 688783 (78/82)
+2025-11-21 09:17:41,051 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 688783
+2025-11-21 09:17:41,357 [INFO] fetch_fund_details: Fetching details for 301617 (79/82)
+2025-11-21 09:17:41,390 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301617
+2025-11-21 09:17:41,692 [INFO] fetch_fund_details: Fetching details for 301584 (80/82)
+2025-11-21 09:17:41,723 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301584
+2025-11-21 09:17:42,028 [INFO] fetch_fund_details: Fetching details for 301557 (81/82)
+2025-11-21 09:17:42,055 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301557
+2025-11-21 09:17:42,360 [INFO] fetch_fund_details: Fetching details for 301638 (82/82)
+2025-11-21 09:17:42,393 [WARNING] fetch_fund_details:   ✗ Failed to fetch details for 301638
+2025-11-21 09:17:42,393 [WARNING] fetch_fund_details: No fund details fetched
+2025-11-21 09:17:57,309 [INFO] fetch_market: Fetching market board from eastmoney_etf
